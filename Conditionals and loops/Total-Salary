@@ -1,0 +1,37 @@
+#include<iostream>
+
+using namespace std;
+
+int main() {
+	int allow,basic;
+	char grade;
+	cin>>basic>>grade;
+	double hra,da,pf;
+
+	if(grade=='A'){
+		allow=1700;
+	}
+	else if(grade=='B'){
+		allow=1500;
+	}
+	else{
+		allow=1300;
+	}
+
+	hra=0.2*basic;
+	da=0.5*basic;
+	pf=0.11*basic;
+
+	double totalsalary  = basic + hra + da + allow -pf;
+	int x;
+	x = (int) totalsalary;  // type casted to integer, x will hold integral part of totalsalary
+if(totalsalary - x > 0.5){
+    totalsalary = x+1;
+}
+else{
+    totalsalary = x;
+}
+	cout<<int(totalsalary);
+	// Write your code here
+	
+}

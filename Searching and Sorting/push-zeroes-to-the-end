@@ -1,0 +1,29 @@
+void pushZeroesEnd(int *input, int size)
+{
+
+
+  int i=0;
+  int k=0;
+  while(i<size){
+    while(k<size){
+        if(input[i]!=0){
+        int temp= input[i];
+        input[i]=input[k];
+        input[k]=temp;
+        
+        k++;
+      }
+      else if(input[i]==0){
+        break;
+      }
+      break;
+
+    }
+    
+    i++;
+  }
+  
+
+
+    //Write your code here
+}

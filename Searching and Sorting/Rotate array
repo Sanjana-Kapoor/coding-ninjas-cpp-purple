@@ -1,0 +1,68 @@
+void rotate(int *input, int d, int n)
+{
+  // Storing rotated version of array
+  int temp[n];
+
+  // Keeping track of the current index
+  // of temp[]
+  int k = 0;
+
+  // Storing the n - d elements of
+  // array arr[] to the front of temp[]
+  for (int i = d; i < n; i++) {
+    temp[k] = input[i];
+    k++;
+  }
+
+  // Storing the first d elements of array arr[]
+  //  into temp
+  for (int i = 0; i < d; i++) {
+    temp[k] = input[i];
+    k++;
+  }
+
+  // Copying the elements of temp[] in arr[]
+  // to get the final rotated array
+  for (int i = 0; i < n; i++) {
+    input[i] = temp[i];
+  }
+}
+
+// Here's an another optimised approach 
+/* #include <bits/stdc++.h> 
+#include <iostream>
+using namespace std;
+
+void reverse(int arr[],int s,int e){
+    while(s<=e){
+        int temp = arr[s];
+        arr[s] = arr[e];
+        arr[e] = temp;
+        s=s+1;
+        e=e-1;
+        
+    }
+}
+
+int main() {
+    int n;
+    cin>>n;
+    int input[1000];
+    for(int i=0;i<n;i++){
+        cin>>input[i];
+    }
+    int k;
+    cin>>k;
+
+    reverse(input,0,n-1);
+    reverse(input,0,n-k-1);
+    reverse(input,n-k,n-1);
+
+    for(int i=0;i<n;i++){
+        cout<<input[i]<<' ';
+    }
+
+    //Write your code here
+
+    return 0;
+} */

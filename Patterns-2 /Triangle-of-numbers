@@ -1,0 +1,46 @@
+/ * Pattern for N=4
+          1
+         232
+        34543
+       4567654
+*/
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin>>n;
+    
+    int i=1;
+    while(i<=n){
+        int k=1;
+        while(k<=n-i){
+            cout<<" ";
+            k++;
+        }
+        
+        int j=1;
+        int num=i;
+        while(j<=i){
+            cout<<num;
+            num++;
+            j++;
+        }
+        
+        int l=1;
+        int var = 2*i-2;
+        while(l<=i-1){
+            cout<<var;
+            var--;
+            l++;
+        }
+        cout<<endl;
+        i++;
+        
+        
+    }
+    /*  Read input as specified in the question.
+     * Print output as specified in the question.
+     */
+    
+}
